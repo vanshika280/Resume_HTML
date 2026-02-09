@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanshika Sardana - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            color: #2c3e50;
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: #555;
+            margin: 2px 0;
+            font-size: 12px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 5px;
+            font-size: 11px;
+        }
+
+        .contact-info a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #004499;
+            text-decoration: underline;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 4px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        /* Profile Section */
+        .profile-text {
+            line-height: 1.4;
+            color: #555;
+            font-size: 12px;
+            text-align: justify;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 8px;
+        }
+
+        .education-item h3 {
+            font-size: 13px;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+
+        .education-item p {
+            color: #666;
+            font-size: 11px;
+            margin: 1px 0;
+        }
+
+        .degree {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .cgpa {
+            color: #27ae60;
+            font-weight: 600;
+        }
+
+        /* Skills Section */
+        .skills-category {
+            margin-bottom: 5px;
+        }
+
+        .skills-category strong {
+            color: #2c3e50;
+            display: inline;
+            margin-right: 5px;
+            font-size: 11px;
+        }
+
+        .skills-list {
+            color: #555;
+            font-size: 11px;
+            line-height: 1.4;
+            display: inline;
+        }
+
+        /* Projects Section */
+        .project-item {
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .project-item:last-child {
+            border-bottom: none;
+        }
+
+        .project-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+
+        .project-tech {
+            color: #3498db;
+            font-size: 10px;
+            margin-bottom: 2px;
+            font-style: italic;
+        }
+
+        .project-description {
+            color: #666;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 8px;
+        }
+
+        .experience-item h3 {
+            font-size: 12px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+
+        .experience-meta {
+            color: #e74c3c;
+            font-size: 10px;
+            margin-bottom: 2px;
+            font-weight: 600;
+        }
+
+        .experience-description {
+            color: #666;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        /* Achievements Section */
+        .achievements-list {
+            list-style: none;
+        }
+
+        .achievements-list li {
+            color: #666;
+            font-size: 11px;
+            margin-bottom: 3px;
+            padding-left: 15px;
+            position: relative;
+            line-height: 1.3;
+        }
+
+        .achievements-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        /* Soft Skills Section */
+        .soft-skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill-badge {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 10px;
+            font-weight: 600;
+            border: 1px solid #bdc3c7;
+        }
+
+        /* Languages Section */
+        .languages {
+            color: #666;
+            font-size: 11px;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                margin: 0;
+                padding: 15px 20px;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+                margin: 0;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .section-title {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>VANSHIKA SARDANA</h1>
+            <p>Ambala Cantt, Haryana</p>
+            <div class="contact-info">
+                <span>📧 <a href="mailto:vanshika2171.be23@chitkara.edu.in">vanshika2171.be23@chitkara.edu.in</a></span>
+                <span>📞 +91 9588790766</span>
+                <span>🔗 <a href="https://github.com/vanshika280" target="_blank">GitHub</a></span>
+                <span>💼 <a href="https://linkedin.com/in/vanshika-sardana-768823281" target="_blank">LinkedIn</a></span>
+            </div>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="section">
+            <h2 class="section-title">Profile</h2>
+            <p class="profile-text">
+                Computer Science Engineering student with strong foundations in Core Java, Spring Boot, SQL, and backend development. 
+                Hands-on experience in designing and developing RESTful backend services using Java and Spring Boot, with focus on clean code, 
+                input validation, and database integration. Quick learner with strong problem-solving skills, adaptable to fast-paced and collaborative environments.
+            </p>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <h3>Chitkara University, Punjab</h3>
+                <p><span class="degree">Bachelor of Engineering in Computer Science</span></p>
+                <p>Expected Graduation: June 2027</p>
+                <p><span class="cgpa">CGPA: 8.7</span></p>
+            </div>
+        </div>
+
+        <!-- Technical Skills Section -->
+        <div class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-category">
+                <strong>Languages:</strong>
+                <div class="skills-list">Java, Python, JavaScript</div>
+            </div>
+            <div class="skills-category">
+                <strong>Core CS:</strong>
+                <div class="skills-list">Basic Data Structures & Algorithms, OOPs, DBMS, SQL</div>
+            </div>
+            <div class="skills-category">
+                <strong>Data Analysis:</strong>
+                <div class="skills-list">NumPy, Pandas, Basic Statistics (Mean, Median, Variance, Standard Deviation)</div>
+            </div>
+            <div class="skills-category">
+                <strong>Web & Backend:</strong>
+                <div class="skills-list">Spring Boot, RESTful APIs, MVC Architecture, Node.js, Express.js, HTML, CSS</div>
+            </div>
+            <div class="skills-category">
+                <strong>Databases:</strong>
+                <div class="skills-list">MySQL, MongoDB</div>
+            </div>
+            <div class="skills-category">
+                <strong>Tools:</strong>
+                <div class="skills-list">Git & GitHub, Postman</div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-item">
+                <div class="project-title">Health Mate – Menstrual Tracker System (Hackathon Project)</div>
+                <div class="project-tech">HTML, CSS, JavaScript, Node.js, MongoDB</div>
+                <div class="project-description">
+                    Designed and implemented responsive web workflows for a women-centric health platform. Built structured forms and interactive components, 
+                    collaborated on backend API integration, and improved overall usability and data flow efficiency.
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-title">Student Management System</div>
+                <div class="project-tech">Java, Spring Boot, MySQL</div>
+                <div class="project-description">
+                    Developed microservice-based CRUD functionality using Java and Spring Boot, exposing RESTful APIs for seamless frontend–backend communication. 
+                    Integrated MySQL using Hibernate (Spring Data JPA) with strong input validation, exception handling, and clean data flow to ensure scalable and reliable backend services.
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-title">Python Data Analysis Practice (Self-Learning Project)</div>
+                <div class="project-tech">Python, Pandas, NumPy</div>
+                <div class="project-description">
+                    Practiced data manipulation and analysis using Pandas. Performed basic data cleaning, filtering, and aggregation operations, 
+                    and applied fundamental statistical calculations to understand data patterns. Actively building proficiency in Python-based data analysis workflows.
+                </div>
+            </div>
+        </div>
+
+        <!-- Internship Experience Section -->
+        <div class="section">
+            <h2 class="section-title">Internship Experience</h2>
+            <div class="experience-item">
+                <h3>Web Development Intern</h3>
+                <div class="experience-meta">Skill Craft Technology | Aug 2025</div>
+                <div class="experience-description">
+                    Developed four frontend-based websites using HTML, CSS, and JavaScript with a focus on responsive design and basic interactivity. 
+                    Showcased completed projects through professional platforms to demonstrate practical web development skills.
+                </div>
+            </div>
+        </div>
+
+        <!-- Leadership & Achievements Section -->
+        <div class="section">
+            <h2 class="section-title">Leadership & Achievements</h2>
+            <ul class="achievements-list">
+                <li>NCC 'B' Certificate Holder — Led and mentored junior cadets and represented the university in NCC events</li>
+                <li>Hackathon Finalist – Health Mate Project (2025)</li>
+                <li>National-Level Skating Athlete — Competed in 6 National Championships</li>
+            </ul>
+        </div>
+
+        <!-- Soft Skills Section -->
+        <div class="section">
+            <h2 class="section-title">Soft Skills</h2>
+            <div class="soft-skills-container">
+                <div class="skill-badge">Teamwork</div>
+                <div class="skill-badge">Problem-Solving</div>
+                <div class="skill-badge">Willingness to Learn</div>
+                <div class="skill-badge">Communication</div>
+                <div class="skill-badge">Adaptability</div>
+            </div>
+        </div>
+
+        <!-- Languages Section -->
+        <div class="section">
+            <h2 class="section-title">Languages</h2>
+            <p class="languages">English | Hindi</p>
+        </div>
+    </div>
+</body>
+</html>
